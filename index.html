@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Конструктор визиток</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="layout">
+    <form id="editor" class="panel">
+        <h2>Конструктор визиток</h2>
+
+        <div class="group">
+            <label>Наименование организации</label>
+            <input name="org" type="text" value="ООО «Ориентир»">
+        </div>
+
+        <div class="group">
+            <label>Фамилия, имя, отчество</label>
+
+            <div class="row">
+                <input name="fullname" type="text" value="Фёдоров Иван Семенович">
+
+                <div class="controls">
+                    <label><input type="radio" name="name_align" value="left"><span class="al l"></span></label>
+                    <label><input type="radio" name="name_align" value="center" checked><span class="al c"></span></label>
+                    <label><input type="radio" name="name_align" value="right"><span class="al r"></span></label>
+                </div>
+
+                <div class="controls">
+                    <label><input type="radio" name="name_size" value="24px"><span class="size">24px</span></label>
+                    <label><input type="radio" name="name_size" value="26px" checked><span class="size">26px</span></label>
+                    <label><input type="radio" name="name_size" value="28px"><span class="size">28px</span></label>
+                </div>
+            </div>
+
+            <div class="colors">
+                <label><input type="radio" name="name_color" value="#000" checked><span style="background:#000"></span></label>
+                <label><input type="radio" name="name_color" value="#0055FB"><span style="background:#0055FB"></span></label>
+                <label><input type="radio" name="name_color" value="#FF2D55"><span style="background:#FF2D55"></span></label>
+                <label><input type="radio" name="name_color" value="#34C759"><span style="background:#34C759"></span></label>
+                <label><input type="radio" name="name_color" value="#FF9500"><span style="background:#FF9500"></span></label>
+                <label><input type="radio" name="name_color" value="#AF52DE"><span style="background:#AF52DE"></span></label>
+            </div>
+        </div>
+
+        <div class="group">
+            <label>Должность</label>
+
+            <div class="row">
+                <input name="job" type="text" value="Менеджер по развитию">
+
+                <div class="controls">
+                    <label><input type="radio" name="job_align" value="left"><span class="al l"></span></label>
+                    <label><input type="radio" name="job_align" value="center" checked><span class="al c"></span></label>
+                    <label><input type="radio" name="job_align" value="right"><span class="al r"></span></label>
+                </div>
+
+                <div class="controls">
+                    <label><input type="radio" name="job_size" value="14px"><span class="size">14px</span></label>
+                    <label><input type="radio" name="job_size" value="16px" checked><span class="size">16px</span></label>
+                    <label><input type="radio" name="job_size" value="18px"><span class="size">18px</span></label>
+                </div>
+            </div>
+
+            <div class="colors">
+                <label><input type="radio" name="job_color" value="#000" checked><span style="background:#000"></span></label>
+                <label><input type="radio" name="job_color" value="#555"><span style="background:#555"></span></label>
+                <label><input type="radio" name="job_color" value="#8E8E93"><span style="background:#8E8E93"></span></label>
+                <label><input type="radio" name="job_color" value="#C7C7CC"><span style="background:#C7C7CC"></span></label>
+            </div>
+        </div>
+
+        <div class="group">
+            <label>Телефон</label>
+
+            <div id="phones">
+                <div class="phone">
+                    <input type="text" name="phone" value="8 (999) 123-45-67">
+                </div>
+            </div>
+
+            <button type="button" id="addPhone" class="add-btn">+ Добавить телефон</button>
+        </div>
+
+        <div class="group inline">
+            <label>E-mail</label>
+            <input name="email" type="text" value="fedorov.is@orientir.org">
+            <label class="chk"><input name="show_email" checked type="checkbox"> Отображать</label>
+        </div>
+
+        <div class="group inline">
+            <label>Адрес</label>
+            <input name="address" type="text" value="Иркутск, Байкальская, 421, оф. 12">
+            <label class="chk"><input name="show_address" checked type="checkbox"> Отображать</label>
+        </div>
+
+        <button class="apply" type="submit">Применить</button>
+    </form>
+
+    <div class="preview">
+        <div id="card" class="card">
+            <div class="org">ООО «Ориентир»</div>
+            <div class="name">Фёдоров Иван Семенович</div>
+            <div class="job">Менеджер по развитию</div>
+            <div class="phones">
+                <div class="line">8 (999) 123-45-67</div>
+            </div>
+            <div class="email">fedorov.is@orientir.org</div>
+            <div class="address">Иркутск, Байкальская, 421, оф. 12</div>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

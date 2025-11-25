@@ -1,0 +1,117 @@
+body {
+    margin: 0;
+    padding: 40px;
+    background: #e5e5e5;
+    font-family: system-ui, sans-serif;
+}
+
+.layout {
+    display: flex;
+    gap: 40px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.panel {
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px #0002;
+    width: 480px;
+}
+
+.group { margin-bottom: 22px; }
+.group label { display: block; margin-bottom: 6px; }
+
+.row { display: flex; gap: 8px; }
+
+input[type=text] {
+    width: 100%;
+    padding: 8px 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.controls { display: flex; gap: 6px; }
+.controls input { display: none; }
+.controls span {
+    padding: 4px 10px;
+    background: #f2f2f2;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+.controls input:checked + span {
+    background: #007aff;
+    color: white;
+    border-color: #007aff;
+}
+
+.al { width: 26px; height: 22px; display: block; background-size: cover;}
+.al.l { background:url("src/left.png"); background-repeat: no-repeat; background-position: center;}
+.al.c { background:url("src/center.png"); background-repeat: no-repeat; background-position: center;}
+.al.r { background:url("src/right.png"); background-repeat: no-repeat; background-position: center;}
+
+.size {display: block;}
+
+.colors { display: flex; gap: 6px; margin-top: 6px; }
+.colors input { display:none; }
+.colors span {
+    display:block;
+    width:22px;height:22px;
+    border-radius:50%;
+    border:1px solid #ddd;
+    cursor:pointer;
+}
+
+.colors input:checked + span::after {
+    content:"";
+    width:8px;height:8px;
+    background:#fff;
+    border-radius:50%;
+    display:block;
+    margin:7px auto;
+}
+
+.inline { display:flex; align-items:center; gap:15px; }
+.chk { white-space: nowrap; }
+
+.add-btn {
+    background:none;
+    border:none;
+    color:#007aff;
+    cursor:pointer;
+    padding:0;
+}
+
+.apply {
+    background:#007aff;
+    color:white;
+    padding:10px 20px;
+    border-radius:8px;
+    border:none;
+    cursor:pointer;
+    font-size:16px;
+}
+
+.preview {
+    flex:1;
+    display:flex;
+    justify-content:center;
+    padding-top:40px;
+}
+
+.card {
+    width: 500px;
+    height: 280px;
+    background:white;
+    border-radius:16px;
+    padding:32px;
+    text-align:center;
+    box-shadow:0 4px 24px #0003;
+}
+
+.card .org { color:#888; margin-bottom:18px; }
+.card .name { font-size:26px; font-weight:600; margin-bottom:6px; }
+.card .job { font-size:16px; color:#777; margin-bottom:20px; }
+.line { margin-bottom:4px; }
